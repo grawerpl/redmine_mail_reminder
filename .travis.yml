@@ -8,23 +8,23 @@ before_install:
   - gem install bundler
 matrix:
   include:
-    - env: REDMINE_VERSION=3.4.2 VERBOSE=yes
+    - env: REDMINE_VERSION=3.4.6 VERBOSE=yes
       rvm: 2.1
-    - env: REDMINE_VERSION=3.4.2 VERBOSE=yes
+    - env: REDMINE_VERSION=3.4.6 VERBOSE=yes
       rvm: 2.2
-    - env: REDMINE_VERSION=3.4.2 VERBOSE=yes
+    - env: REDMINE_VERSION=3.4.6 VERBOSE=yes
       rvm: 2.3
-    - env: REDMINE_VERSION=3.4.2 VERBOSE=yes
+    - env: REDMINE_VERSION=3.4.6 VERBOSE=yes
       rvm: 2.4
-    - env: REDMINE_VERSION=3.3.4 VERBOSE=yes
+    - env: REDMINE_VERSION=3.3.8 VERBOSE=yes
       rvm: 2.1
-    - env: REDMINE_VERSION=3.3.4 VERBOSE=yes
+    - env: REDMINE_VERSION=3.3.8 VERBOSE=yes
       rvm: 2.2
-    - env: REDMINE_VERSION=3.3.4 VERBOSE=yes
+    - env: REDMINE_VERSION=3.3.8 VERBOSE=yes
       rvm: 2.3
-    - env: REDMINE_VERSION=3.2.7 VERBOSE=yes
+    - env: REDMINE_VERSION=3.2.9 VERBOSE=yes
       rvm: 2.1
-    - env: REDMINE_VERSION=3.2.7 VERBOSE=yes
+    - env: REDMINE_VERSION=3.2.9 VERBOSE=yes
       rvm: 2.2
 
 script:
