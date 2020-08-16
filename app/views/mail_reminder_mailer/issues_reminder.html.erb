@@ -6,6 +6,9 @@
 <%= stylesheet_link_tag '/stylesheets/application', 'jquery/jquery-ui-1.11.0', 'application', :media => 'all' %>
 </head>
 <body>
+<% if Setting.plugin_redmine_mail_reminder['issue_reminder_mail_header'].present? %>
+    <span class="header"><%= Redmine::WikiFormatting.to_html(Setting.text_formatting, Setting.plugin_redmine_mail_reminder['issue_reminder_mail_header']).html_safe %></span>
+<% end %>
 <% @queries_data.each do |project, query, issues| %>
     <h1><%= "#{project.name}: #{query.name}" %></h1>
     <table class="list issues">
@@ -27,5 +30,12 @@
         </tbody>
     </table>
 <% end %>
+<% if Setting.plugin_redmine_mail_reminder['issue_reminder_mail_footer'].present? -%>
+<br>
+<hr>
+<i style="font-size: 12px;">
+    <span class="footer"><%= Redmine::WikiFormatting.to_html(Setting.text_formatting, Setting.plugin_redmine_mail_reminder['issue_reminder_mail_footer']).html_safe %></span>
+</i>
+<% end -%>
 </body>
 </html>
